@@ -125,50 +125,66 @@
           </p>
         </div>
         <form id="quoteForm" class="hud-form" novalidate>
-          <label for="quoteName">Full Name</label>
-          <input id="quoteName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+          <div class="hud-form-grid">
+            <div class="form-field">
+              <label for="quoteName">Full Name</label>
+              <input id="quoteName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+            </div>
 
-          <label for="quoteEmail">Business Email</label>
-          <input
-            id="quoteEmail"
-            name="email"
-            type="email"
-            autocomplete="email"
-            placeholder="name@brand.com"
-            required
-          />
+            <div class="form-field">
+              <label for="quoteEmail">Business Email</label>
+              <input
+                id="quoteEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="name@brand.com"
+                required
+              />
+            </div>
 
-          <label for="quoteCompany">Brand / Company</label>
-          <input id="quoteCompany" name="company" type="text" placeholder="Brand or agency name" required />
+            <div class="form-field">
+              <label for="quoteCompany">Brand / Company</label>
+              <input id="quoteCompany" name="company" type="text" placeholder="Brand or agency name" required />
+            </div>
 
-          <label for="quoteService">Service Type</label>
-          <select id="quoteService" name="service" required>
-            <option value="">Select one</option>
-            <option>Runway Placement</option>
-            <option>Editorial Representation</option>
-            <option>Campaign Booking</option>
-            <option>Mixed Scope</option>
-          </select>
+            <div class="form-field">
+              <label for="quoteService">Service Type</label>
+              <select id="quoteService" name="service" required>
+                <option value="">Select one</option>
+                <option>Runway Placement</option>
+                <option>Editorial Representation</option>
+                <option>Campaign Booking</option>
+                <option>Mixed Scope</option>
+              </select>
+            </div>
 
-          <label for="quoteBudget">Estimated Budget</label>
-          <select id="quoteBudget" name="budget" required>
-            <option value="">Select one</option>
-            <option>$5,000 - $15,000</option>
-            <option>$15,000 - $40,000</option>
-            <option>$40,000 - $90,000</option>
-            <option>$90,000+</option>
-          </select>
+            <div class="form-field form-field--full">
+              <label for="quoteBudget">Estimated Budget</label>
+              <select id="quoteBudget" name="budget" required>
+                <option value="">Select one</option>
+                <option>$5,000 - $15,000</option>
+                <option>$15,000 - $40,000</option>
+                <option>$40,000 - $90,000</option>
+                <option>$90,000+</option>
+              </select>
+            </div>
 
-          <label for="quoteMessage">Project Brief</label>
-          <textarea
-            id="quoteMessage"
-            name="message"
-            rows="4"
-            placeholder="Deliverables, timeline, usage rights, and target market."
-            required
-          ></textarea>
+            <div class="form-field form-field--full">
+              <label for="quoteMessage">Project Brief</label>
+              <textarea
+                id="quoteMessage"
+                name="message"
+                rows="4"
+                placeholder="Deliverables, timeline, usage rights, and target market."
+                required
+              ></textarea>
+            </div>
+          </div>
 
-          <button type="submit">Submit Quote Request</button>
+          <div class="form-actions">
+            <button type="submit">Submit Quote Request</button>
+          </div>
           <p id="quoteFeedback" class="form-feedback" role="status" aria-live="polite"></p>
         </form>
       </section>
@@ -213,41 +229,55 @@
           <a href="mailto:bookings@omnilon.online" class="mail-link">bookings@omnilon.online</a>
         </div>
         <form id="consultationForm" class="hud-form" novalidate>
-          <label for="consultName">Full Name</label>
-          <input id="consultName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+          <div class="hud-form-grid">
+            <div class="form-field">
+              <label for="consultName">Full Name</label>
+              <input id="consultName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+            </div>
 
-          <label for="consultEmail">Email</label>
-          <input
-            id="consultEmail"
-            name="email"
-            type="email"
-            autocomplete="email"
-            placeholder="name@domain.com"
-            required
-          />
+            <div class="form-field">
+              <label for="consultEmail">Email</label>
+              <input
+                id="consultEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="name@domain.com"
+                required
+              />
+            </div>
 
-          <label for="consultType">Consultation Type</label>
-          <select id="consultType" name="type" required>
-            <option value="">Select one</option>
-            <option>Brand Consultation</option>
-            <option>Talent Consultation</option>
-            <option>Career Strategy Session</option>
-            <option>Booking Preparation</option>
-          </select>
+            <div class="form-field">
+              <label for="consultType">Consultation Type</label>
+              <select id="consultType" name="type" required>
+                <option value="">Select one</option>
+                <option>Brand Consultation</option>
+                <option>Talent Consultation</option>
+                <option>Career Strategy Session</option>
+                <option>Booking Preparation</option>
+              </select>
+            </div>
 
-          <label for="consultDate">Preferred Date</label>
-          <input id="consultDate" name="date" type="date" required />
+            <div class="form-field">
+              <label for="consultDate">Preferred Date</label>
+              <input id="consultDate" name="date" type="date" required />
+            </div>
 
-          <label for="consultDetails">Session Notes</label>
-          <textarea
-            id="consultDetails"
-            name="details"
-            rows="4"
-            placeholder="Key topics, goals, and urgency level."
-            required
-          ></textarea>
+            <div class="form-field form-field--full">
+              <label for="consultDetails">Session Notes</label>
+              <textarea
+                id="consultDetails"
+                name="details"
+                rows="4"
+                placeholder="Key topics, goals, and urgency level."
+                required
+              ></textarea>
+            </div>
+          </div>
 
-          <button type="submit">Request Consultation</button>
+          <div class="form-actions">
+            <button type="submit">Request Consultation</button>
+          </div>
           <p id="consultationFeedback" class="form-feedback" role="status" aria-live="polite"></p>
         </form>
       </section>
