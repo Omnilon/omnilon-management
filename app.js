@@ -4,6 +4,38 @@ const PROFILE_CYCLE_MS = 5000;
 
 const TALENTS = [
   {
+    id: "isaac-lelonek",
+    name: "Isaac Lelonek",
+    handle: "@isaaclelonek",
+    birthPlace: "United States",
+    height: "5'11\" / 180 cm",
+    age: "25",
+    genderIdentity: "Male",
+    division: "Runway / Editorial",
+    image: "./public/assets/images/isaac/isaac-static-card-g.jpg",
+    profileImages: [
+      "./public/assets/images/isaac/isaac-closeup-shirt.jpg",
+      "./public/assets/images/isaac/isaac-full-shirt.jpg",
+      "./public/assets/images/isaac/isaac-closeup-shirtless.jpg",
+      "./public/assets/images/isaac/isaac-full-shirtless.jpg",
+    ],
+  },
+  {
+    id: "peter-kessler",
+    name: "Peter Kessler",
+    handle: "@peterkessler",
+    birthPlace: "Greece",
+    height: "6'2\" / 188 cm",
+    age: "22",
+    genderIdentity: "Male",
+    division: "Runway / Editorial",
+    image: "./public/assets/images/peter/peter-closeup-shirt.jpg",
+    profileImages: [
+      "./public/assets/images/peter/peter-closeup-shirt.jpg",
+      "./public/assets/images/peter/peter-closeup-shirtless.jpg",
+    ],
+  },
+  {
     id: "adrian-vale",
     name: "Adrian Vale",
     handle: "@adrianv.arch",
