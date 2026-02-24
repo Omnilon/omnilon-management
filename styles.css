@@ -393,6 +393,10 @@ h1 {
   background: #ececec;
 }
 
+.talent-card img.card-image--isaac-lower {
+  object-position: center 14%;
+}
+
 .card-meta {
   padding: 0.45rem 0.5rem 0.55rem;
   display: grid;

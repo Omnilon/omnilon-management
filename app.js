@@ -253,6 +253,9 @@ function renderTalentGrid() {
     img.src = talent.image;
     img.alt = `${talent.name} portrait`;
     img.className = "card-image";
+    if (talent.id === "isaac-lelonek") {
+      img.classList.add("card-image--isaac-lower");
+    }
 
     const meta = document.createElement("div");
     meta.className = "card-meta";
