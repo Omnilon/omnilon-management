@@ -115,6 +115,8 @@ body {
   justify-self: end;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 0.45rem;
 }
 
@@ -161,8 +163,12 @@ body {
 
 .hero-frame,
 .intel-shell,
+.services-shell,
+.quote-shell,
 .application-shell,
-.bookings-shell {
+.consultation-shell,
+.about-shell,
+.team-shell {
   border: 1px solid var(--line-strong);
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.92), rgba(240, 240, 240, 0.94));
   padding: clamp(1rem, 2vw, 1.65rem);
@@ -173,8 +179,12 @@ body {
 
 .hero-frame::before,
 .intel-shell::before,
+.services-shell::before,
+.quote-shell::before,
 .application-shell::before,
-.bookings-shell::before {
+.consultation-shell::before,
+.about-shell::before,
+.team-shell::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -383,10 +393,6 @@ h1 {
   background: #ececec;
 }
 
-.talent-card img.card-image--isaac {
-  object-position: center 0%;
-}
-
 .card-meta {
   padding: 0.45rem 0.5rem 0.55rem;
   display: grid;
@@ -517,6 +523,135 @@ h1 {
   letter-spacing: 0.03em;
 }
 
+.section-intro {
+  display: grid;
+  gap: 0.58rem;
+}
+
+.section-copy {
+  max-width: 72ch;
+  color: var(--ink-soft);
+}
+
+.services-shell,
+.about-shell,
+.team-shell {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.service-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.82);
+  padding: 0.7rem;
+  clip-path: polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 11px 100%, 0 calc(100% - 11px));
+  display: grid;
+  gap: 0.44rem;
+}
+
+.service-code {
+  font-family: "OMNILON Mono", "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.62rem;
+  color: var(--ink-muted);
+}
+
+h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.service-card p:last-child {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.quote-shell,
+.consultation-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.88fr);
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.hud-form {
+  border: 1px solid var(--line);
+  padding: 0.7rem;
+  background: rgba(255, 255, 255, 0.85);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  display: grid;
+  gap: 0.48rem;
+}
+
+.hud-form label {
+  font-family: "OMNILON Mono", "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  color: var(--ink-muted);
+}
+
+.hud-form input,
+.hud-form select,
+.hud-form textarea,
+.hud-form button {
+  min-height: 44px;
+  border: 1px solid var(--line-strong);
+  font: inherit;
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+}
+
+.hud-form input,
+.hud-form select,
+.hud-form textarea {
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  padding: 0.62rem 0.74rem;
+}
+
+.hud-form textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+
+.hud-form button {
+  background: var(--ink);
+  color: #fff;
+  font-family: "OMNILON Mono", "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.63rem;
+  cursor: pointer;
+}
+
+.hud-form button:hover,
+.hud-form button:focus-visible {
+  background: #242424;
+}
+
+.form-feedback {
+  min-height: 1.2rem;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.form-feedback[data-state="error"] {
+  color: #821818;
+}
+
+.form-feedback[data-state="success"] {
+  color: #1e4717;
+}
+
 .application-shell {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.65fr);
@@ -625,9 +760,64 @@ h2 {
   color: #1e4717;
 }
 
-.bookings-shell {
+.about-grid {
   display: grid;
-  gap: 0.55rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.about-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.84);
+  padding: 0.7rem;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  display: grid;
+  gap: 0.45rem;
+}
+
+.about-value {
+  font-family: "OMNILON Mono", "IBM Plex Mono", monospace;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.about-label {
+  color: var(--ink-soft);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.team-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.7rem;
+  clip-path: polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 11px 100%, 0 calc(100% - 11px));
+  display: grid;
+  gap: 0.35rem;
+}
+
+.team-role {
+  font-family: "OMNILON Mono", "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.61rem;
+  color: var(--ink-muted);
+}
+
+.team-name {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-copy {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
 }
 
 .mail-link {
@@ -696,12 +886,22 @@ h2 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .intel-grid {
     grid-template-columns: 1fr;
   }
 
+  .quote-shell,
+  .consultation-shell,
   .application-shell {
     grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -738,6 +938,10 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-actions {
     flex-direction: column;
   }
@@ -767,6 +971,11 @@ h2 {
 
   .newsletter-row button {
     width: 100%;
+  }
+
+  .services-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
   }
 }
 

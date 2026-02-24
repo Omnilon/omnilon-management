@@ -1,125 +1,91 @@
 const NEWSLETTER_STORAGE_KEY = "omnilon_management_newsletter_v1";
 const HOVER_LOCK_MS = 7000;
 const PROFILE_CYCLE_MS = 5000;
-const ISAAC_ID = "isaac-lelonek";
-const PETER_ID = "peter-kessler";
 
 const TALENTS = [
   {
-    id: ISAAC_ID,
-    name: "Isaac Lelonek",
-    handle: "@isaaclelonek",
-    birthPlace: "United States",
+    id: "adrian-vale",
+    name: "Adrian Vale",
+    handle: "@adrianv.arch",
+    birthPlace: "Austin, Texas, USA",
     height: "5'11\" / 180 cm",
-    age: "25",
-    genderIdentity: "Male",
-    division: "Runway / Editorial",
-    image: "./public/assets/images/isaac/isaac-static-card-g.jpg",
-    profileImages: [
-      "./public/assets/images/isaac/isaac-closeup-shirt.jpg",
-      "./public/assets/images/isaac/isaac-full-shirt.jpg",
-      "./public/assets/images/isaac/isaac-closeup-shirtless.jpg",
-      "./public/assets/images/isaac/isaac-full-shirtless.jpg",
-    ],
-  },
-  {
-    id: PETER_ID,
-    name: "Peter Kessler",
-    handle: "@peterkessler",
-    birthPlace: "Greece",
-    height: "6'2\" / 188 cm",
-    age: "22",
-    genderIdentity: "Male",
-    division: "Runway / Editorial",
-    image: "./public/assets/images/peter/peter-closeup-shirt.jpg",
-    profileImages: [
-      "./public/assets/images/peter/peter-closeup-shirt.jpg",
-      "./public/assets/images/peter/peter-closeup-shirtless.jpg",
-    ],
-  },
-  {
-    id: "soren-myles",
-    name: "Soren Myles",
-    handle: "@sorenmyles",
-    birthPlace: "Canada",
-    height: "6'2\" / 188 cm",
     age: "24",
-    genderIdentity: "Man",
-    division: "Campaign / Runway",
-    image: "./public/assets/images/soren-myles.svg",
-    profileImages: ["./public/assets/images/soren-myles.svg"],
-  },
-  {
-    id: "ivana-reed",
-    name: "Ivana Reed",
-    handle: "@ivanareed",
-    birthPlace: "Serbia",
-    height: "5'10\" / 178 cm",
-    age: "21",
-    genderIdentity: "Woman",
-    division: "Beauty / Editorial",
-    image: "./public/assets/images/ivana-reed.svg",
-    profileImages: ["./public/assets/images/ivana-reed.svg"],
-  },
-  {
-    id: "noor-vale",
-    name: "Noor Vale",
-    handle: "@noorvale",
-    birthPlace: "United Arab Emirates",
-    height: "5'9\" / 176 cm",
-    age: "23",
-    genderIdentity: "Non-binary",
-    division: "Editorial / Concept",
-    image: "./public/assets/images/noor-vale.svg",
-    profileImages: ["./public/assets/images/noor-vale.svg"],
-  },
-  {
-    id: "kael-frost",
-    name: "Kael Frost",
-    handle: "@kaelfrost",
-    birthPlace: "United Kingdom",
-    height: "6'1\" / 185 cm",
-    age: "25",
-    genderIdentity: "Man",
-    division: "Runway / Luxury",
-    image: "./public/assets/images/kael-frost.svg",
-    profileImages: ["./public/assets/images/kael-frost.svg"],
-  },
-  {
-    id: "maya-cain",
-    name: "Maya Cain",
-    handle: "@mayacain",
-    birthPlace: "United States",
-    height: "5'10\" / 178 cm",
-    age: "20",
-    genderIdentity: "Woman",
-    division: "Campaign / Beauty",
-    image: "./public/assets/images/maya-cain.svg",
-    profileImages: ["./public/assets/images/maya-cain.svg"],
-  },
-  {
-    id: "zuri-blake",
-    name: "Zuri Blake",
-    handle: "@zuriblake",
-    birthPlace: "South Africa",
-    height: "5'11\" / 180 cm",
-    age: "22",
-    genderIdentity: "Woman",
+    genderIdentity: "Man (he/him)",
     division: "Editorial / Runway",
-    image: "./public/assets/images/zuri-blake.svg",
-    profileImages: ["./public/assets/images/zuri-blake.svg"],
+    image: "./public/assets/images/talent/adrian-vale.png",
+    profileImages: ["./public/assets/images/talent/adrian-vale.png"],
   },
   {
-    id: "leo-strand",
-    name: "Leo Strand",
-    handle: "@leostrand",
-    birthPlace: "Sweden",
-    height: "6'0\" / 183 cm",
+    id: "mina-seo",
+    name: "Mina Seo",
+    handle: "@minaseo.studio",
+    birthPlace: "San Diego, California, USA",
+    height: "5'6\" / 168 cm",
     age: "23",
-    genderIdentity: "Man",
+    genderIdentity: "Woman (she/her)",
+    division: "Beauty / Editorial",
+    image: "./public/assets/images/talent/mina-seo.png",
+    profileImages: ["./public/assets/images/talent/mina-seo.png"],
+  },
+  {
+    id: "elias-hart",
+    name: "Elias Hart",
+    handle: "@eliashart.jpg",
+    birthPlace: "Denver, Colorado, USA",
+    height: "6'0\" / 183 cm",
+    age: "25",
+    genderIdentity: "Man (he/him)",
+    division: "Campaign / Runway",
+    image: "./public/assets/images/talent/elias-hart.png",
+    profileImages: ["./public/assets/images/talent/elias-hart.png"],
+  },
+  {
+    id: "naomi-rhodes",
+    name: "Naomi Rhodes",
+    handle: "@naomi.rhodes",
+    birthPlace: "Atlanta, Georgia, USA",
+    height: "5'8\" / 173 cm",
+    age: "26",
+    genderIdentity: "Woman (she/her)",
+    division: "Editorial / Concept",
+    image: "./public/assets/images/talent/naomi-rhodes.png",
+    profileImages: ["./public/assets/images/talent/naomi-rhodes.png"],
+  },
+  {
+    id: "camila-reyes",
+    name: "Camila Reyes",
+    handle: "@cami.reyes.co",
+    birthPlace: "Phoenix, Arizona, USA",
+    height: "5'7\" / 170 cm",
+    age: "24",
+    genderIdentity: "Woman (she/her)",
+    division: "Beauty / Editorial",
+    image: "./public/assets/images/talent/camila-reyes.png",
+    profileImages: ["./public/assets/images/talent/camila-reyes.png"],
+  },
+  {
+    id: "kenji-mori",
+    name: "Kenji Mori",
+    handle: "@kenjimori.frames",
+    birthPlace: "Seattle, Washington, USA",
+    height: "5'10\" / 178 cm",
+    age: "29",
+    genderIdentity: "Man (he/him)",
+    division: "Campaign / Editorial",
+    image: "./public/assets/images/talent/kenji-mori.png",
+    profileImages: ["./public/assets/images/talent/kenji-mori.png"],
+  },
+  {
+    id: "zayn-malikhan",
+    name: "Zayn Malikhan",
+    handle: "@zayn.malikhan",
+    birthPlace: "Jersey City, New Jersey, USA",
+    height: "5'11\" / 180 cm",
+    age: "27",
+    genderIdentity: "Man (he/him)",
     division: "Campaign / Motion",
-    image: "./public/assets/images/leo-strand.svg",
-    profileImages: ["./public/assets/images/leo-strand.svg"],
+    image: "./public/assets/images/talent/zayn-malikhan.png",
+    profileImages: ["./public/assets/images/talent/zayn-malikhan.png"],
   },
 ];
 
@@ -139,9 +105,14 @@ const ui = {
   fieldAge: document.querySelector("#fieldAge"),
   fieldGenderIdentity: document.querySelector("#fieldGenderIdentity"),
   nextIntake: document.querySelector("#nextIntake"),
+  quoteForm: document.querySelector("#quoteForm"),
+  quoteFeedback: document.querySelector("#quoteFeedback"),
   newsletterForm: document.querySelector("#newsletterForm"),
   newsletterEmail: document.querySelector("#newsletterEmail"),
   newsletterFeedback: document.querySelector("#newsletterFeedback"),
+  consultationForm: document.querySelector("#consultationForm"),
+  consultationDate: document.querySelector("#consultDate"),
+  consultationFeedback: document.querySelector("#consultationFeedback"),
   scanPulse: document.querySelector("#scanPulse"),
 };
 
@@ -159,7 +130,9 @@ function init() {
   renderTalentGrid();
   setupScanPulse();
   setupIntakeLabel();
+  setupQuoteForm();
   setupNewsletterForm();
+  setupConsultationForm();
   setDefaultTalentForDevice();
   setupResponsiveSelectionFallback();
 }
@@ -248,9 +221,6 @@ function renderTalentGrid() {
     img.src = talent.image;
     img.alt = `${talent.name} portrait`;
     img.className = "card-image";
-    if (talent.id === ISAAC_ID) {
-      img.classList.add("card-image--isaac");
-    }
 
     const meta = document.createElement("div");
     meta.className = "card-meta";
@@ -545,6 +515,73 @@ function setupIntakeLabel() {
       : `Next intake: Fall ${intakeYear} (${months} months remaining)`;
 }
 
+function setupQuoteForm() {
+  if (!ui.quoteForm || !ui.quoteFeedback) {
+    return;
+  }
+
+  ui.quoteForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(ui.quoteForm);
+    const name = normalizeText(formData.get("name"));
+    const email = normalizeEmail(formData.get("email"));
+    const company = normalizeText(formData.get("company"));
+    const service = normalizeText(formData.get("service"));
+    const budget = normalizeText(formData.get("budget"));
+    const message = normalizeText(formData.get("message"));
+
+    if (!name || !company || !service || !budget || !message || !isValidEmail(email)) {
+      setInlineFeedback(ui.quoteFeedback, "Complete all fields with a valid business email.", "error");
+      return;
+    }
+
+    const submitButton = ui.quoteForm.querySelector("button[type='submit']");
+    setSubmitButtonBusy(submitButton, true, "Submitting...");
+
+    await wait(420);
+
+    setInlineFeedback(ui.quoteFeedback, "Quote request secured. Desk response window: within 24 hours.", "success");
+    ui.quoteForm.reset();
+    setSubmitButtonBusy(submitButton, false);
+  });
+}
+
+function setupConsultationForm() {
+  if (!ui.consultationForm || !ui.consultationFeedback) {
+    return;
+  }
+
+  if (ui.consultationDate) {
+    ui.consultationDate.min = toDateInputValue(new Date());
+  }
+
+  ui.consultationForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(ui.consultationForm);
+    const name = normalizeText(formData.get("name"));
+    const email = normalizeEmail(formData.get("email"));
+    const type = normalizeText(formData.get("type"));
+    const date = normalizeText(formData.get("date"));
+    const details = normalizeText(formData.get("details"));
+
+    if (!name || !type || !date || !details || !isValidEmail(email)) {
+      setInlineFeedback(ui.consultationFeedback, "Complete all fields before requesting consultation.", "error");
+      return;
+    }
+
+    const submitButton = ui.consultationForm.querySelector("button[type='submit']");
+    setSubmitButtonBusy(submitButton, true, "Sending...");
+
+    await wait(420);
+
+    setInlineFeedback(ui.consultationFeedback, "Consultation request received. We will confirm by email.", "success");
+    ui.consultationForm.reset();
+    setSubmitButtonBusy(submitButton, false);
+  });
+}
+
 function resolveNextFallDate(now) {
   const year = now.getFullYear();
   const septemberIndex = 8;
@@ -616,6 +653,10 @@ function setupNewsletterForm() {
   });
 }
 
+function normalizeText(value) {
+  return String(value || "").trim();
+}
+
 function normalizeEmail(value) {
   return String(value || "").trim().toLowerCase();
 }
@@ -628,8 +669,32 @@ function setFeedback(text, state) {
   if (!ui.newsletterFeedback) {
     return;
   }
-  ui.newsletterFeedback.textContent = text;
-  ui.newsletterFeedback.dataset.state = state;
+  setInlineFeedback(ui.newsletterFeedback, text, state);
+}
+
+function setInlineFeedback(target, text, state) {
+  if (!target) {
+    return;
+  }
+  target.textContent = text;
+  target.dataset.state = state;
+}
+
+function setSubmitButtonBusy(button, isBusy, busyLabel = "Submitting...") {
+  if (!button) {
+    return;
+  }
+  if (!button.dataset.defaultLabel) {
+    button.dataset.defaultLabel = button.textContent;
+  }
+  button.disabled = isBusy;
+  button.textContent = isBusy ? busyLabel : button.dataset.defaultLabel;
+}
+
+function toDateInputValue(date) {
+  const local = new Date(date);
+  local.setMinutes(local.getMinutes() - local.getTimezoneOffset());
+  return local.toISOString().slice(0, 10);
 }
 
 function loadSignups() {

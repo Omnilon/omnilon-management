@@ -14,7 +14,7 @@
     <div class="backdrop-grid" aria-hidden="true"></div>
 
     <header class="hud-header">
-      <a class="brand" href="#top" aria-label="OMNILON MANAGEMENT home">
+      <a class="brand" href="#home" aria-label="OMNILON MANAGEMENT home">
         <span class="brand-main">OMNILON</span>
         <span class="brand-sub">MANAGEMENT</span>
       </a>
@@ -22,26 +22,30 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hudNav">Menu</button>
 
       <nav id="hudNav" class="hud-nav" aria-label="Primary">
-        <a href="#console">Talent Intel</a>
-        <a href="#application-center">Application Center</a>
-        <a href="#private-bookings">Bookings</a>
+        <a href="#home">Home</a>
+        <a href="#talent">Talent</a>
+        <a href="#services">Services</a>
+        <a href="#request-quote">Request A Quote</a>
+        <a href="#consultation">Consultation</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
       </nav>
     </header>
 
     <main id="top" class="page-shell">
-      <section class="hero-frame reveal" data-reveal>
+      <section id="home" class="hero-frame reveal" data-reveal>
         <p class="chip">Private Management Network</p>
         <h1>OMNILON MANAGEMENT</h1>
         <p class="hero-line">
           A brutalist high-tech interface for elite talent operations, global placements, and precision casting.
         </p>
         <div class="hero-actions">
-          <a href="#console" class="btn btn-primary">Enter Talent Console</a>
-          <a href="#application-center" class="btn btn-outline">View Intake Status</a>
+          <a href="#talent" class="btn btn-primary">Enter Talent Console</a>
+          <a href="#request-quote" class="btn btn-outline">Request Private Quote</a>
         </div>
       </section>
 
-      <section id="console" class="intel-shell reveal" data-reveal>
+      <section id="talent" class="intel-shell reveal" data-reveal>
         <div class="intel-header">
           <p class="chip">Talent Intelligence Console</p>
           <p class="intel-status">
@@ -78,6 +82,97 @@
         </div>
       </section>
 
+      <section id="services" class="services-shell reveal" data-reveal>
+        <div class="section-intro">
+          <p class="chip">Services</p>
+          <h2>Full-stack talent representation and creative operations</h2>
+          <p class="section-copy">
+            OMNILON MANAGEMENT operates as a private desk for runway, editorial, and campaign strategy. Every service
+            line is built for high-value placements, precise brand fit, and controlled growth.
+          </p>
+        </div>
+        <div class="services-grid" role="list" aria-label="Agency services">
+          <article class="service-card" role="listitem">
+            <p class="service-code">SVC-01</p>
+            <h3>Runway + Editorial Placement</h3>
+            <p>Casting direction, season targeting, and direct negotiation with global editorial and runway teams.</p>
+          </article>
+          <article class="service-card" role="listitem">
+            <p class="service-code">SVC-02</p>
+            <h3>Campaign Representation</h3>
+            <p>Luxury and commercial campaign booking with brand-fit filters, usage control, and release oversight.</p>
+          </article>
+          <article class="service-card" role="listitem">
+            <p class="service-code">SVC-03</p>
+            <h3>Image + Social Architecture</h3>
+            <p>Content planning, profile optimization, and audience development that preserves premium positioning.</p>
+          </article>
+          <article class="service-card" role="listitem">
+            <p class="service-code">SVC-04</p>
+            <h3>Production + Movement Coaching</h3>
+            <p>On-camera coaching, fit development, and production prep for print, motion, and show execution.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="request-quote" class="quote-shell reveal" data-reveal>
+        <div class="section-intro">
+          <p class="chip">Request A Quote</p>
+          <h2>Send your project scope for private pricing</h2>
+          <p class="section-copy">
+            Share your campaign, runway, or content brief. Our desk reviews scope, timeline, and usage terms before
+            returning a tailored quote package.
+          </p>
+        </div>
+        <form id="quoteForm" class="hud-form" novalidate>
+          <label for="quoteName">Full Name</label>
+          <input id="quoteName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+
+          <label for="quoteEmail">Business Email</label>
+          <input
+            id="quoteEmail"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="name@brand.com"
+            required
+          />
+
+          <label for="quoteCompany">Brand / Company</label>
+          <input id="quoteCompany" name="company" type="text" placeholder="Brand or agency name" required />
+
+          <label for="quoteService">Service Type</label>
+          <select id="quoteService" name="service" required>
+            <option value="">Select one</option>
+            <option>Runway Placement</option>
+            <option>Editorial Representation</option>
+            <option>Campaign Booking</option>
+            <option>Mixed Scope</option>
+          </select>
+
+          <label for="quoteBudget">Estimated Budget</label>
+          <select id="quoteBudget" name="budget" required>
+            <option value="">Select one</option>
+            <option>$5,000 - $15,000</option>
+            <option>$15,000 - $40,000</option>
+            <option>$40,000 - $90,000</option>
+            <option>$90,000+</option>
+          </select>
+
+          <label for="quoteMessage">Project Brief</label>
+          <textarea
+            id="quoteMessage"
+            name="message"
+            rows="4"
+            placeholder="Deliverables, timeline, usage rights, and target market."
+            required
+          ></textarea>
+
+          <button type="submit">Submit Quote Request</button>
+          <p id="quoteFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
       <section id="application-center" class="application-shell reveal" data-reveal>
         <div>
           <p class="chip">Application Center</p>
@@ -107,10 +202,108 @@
         </form>
       </section>
 
-      <section id="private-bookings" class="bookings-shell reveal" data-reveal>
-        <p class="chip">Private Bookings</p>
-        <h2>Editorial and campaign bookings by direct desk</h2>
-        <a href="mailto:bookings@omnilon.online" class="mail-link">bookings@omnilon.online</a>
+      <section id="consultation" class="consultation-shell reveal" data-reveal>
+        <div class="section-intro">
+          <p class="chip">Consultation</p>
+          <h2>Confidential strategy sessions for brands and talent</h2>
+          <p class="section-copy">
+            Book a private consultation to align creative direction, project fit, and representation goals before
+            moving into production or booking cycles.
+          </p>
+          <a href="mailto:bookings@omnilon.online" class="mail-link">bookings@omnilon.online</a>
+        </div>
+        <form id="consultationForm" class="hud-form" novalidate>
+          <label for="consultName">Full Name</label>
+          <input id="consultName" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+
+          <label for="consultEmail">Email</label>
+          <input
+            id="consultEmail"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="name@domain.com"
+            required
+          />
+
+          <label for="consultType">Consultation Type</label>
+          <select id="consultType" name="type" required>
+            <option value="">Select one</option>
+            <option>Brand Consultation</option>
+            <option>Talent Consultation</option>
+            <option>Career Strategy Session</option>
+            <option>Booking Preparation</option>
+          </select>
+
+          <label for="consultDate">Preferred Date</label>
+          <input id="consultDate" name="date" type="date" required />
+
+          <label for="consultDetails">Session Notes</label>
+          <textarea
+            id="consultDetails"
+            name="details"
+            rows="4"
+            placeholder="Key topics, goals, and urgency level."
+            required
+          ></textarea>
+
+          <button type="submit">Request Consultation</button>
+          <p id="consultationFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="about" class="about-shell reveal" data-reveal>
+        <div class="section-intro">
+          <p class="chip">About</p>
+          <h2>Built as a selective management office, not a volume agency</h2>
+          <p class="section-copy">
+            OMNILON MANAGEMENT is structured around elite positioning, disciplined brand partnerships, and long-horizon
+            career construction. Every placement is filtered through strategic fit, image durability, and market value.
+          </p>
+        </div>
+        <div class="about-grid" role="list" aria-label="Agency profile metrics">
+          <article class="about-card" role="listitem">
+            <p class="about-value">01</p>
+            <p class="about-label">Selective annual intake cycle</p>
+          </article>
+          <article class="about-card" role="listitem">
+            <p class="about-value">12+</p>
+            <p class="about-label">Global market partners across Europe and North America</p>
+          </article>
+          <article class="about-card" role="listitem">
+            <p class="about-value">24/7</p>
+            <p class="about-label">Real-time campaign operations and desk response</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="team" class="team-shell reveal" data-reveal>
+        <div class="section-intro">
+          <p class="chip">Team</p>
+          <h2>Core management operators</h2>
+        </div>
+        <div class="team-grid" role="list" aria-label="Core agency team">
+          <article class="team-card" role="listitem">
+            <p class="team-role">Executive Director</p>
+            <p class="team-name">Avery Holt</p>
+            <p class="team-copy">Agency vision, market positioning, and strategic partnerships.</p>
+          </article>
+          <article class="team-card" role="listitem">
+            <p class="team-role">Head Booker</p>
+            <p class="team-name">Nora Valez</p>
+            <p class="team-copy">Runway/editorial booking architecture and client alignment.</p>
+          </article>
+          <article class="team-card" role="listitem">
+            <p class="team-role">Talent Development</p>
+            <p class="team-name">Milan Kaye</p>
+            <p class="team-copy">Model growth pathways, movement coaching, and readiness control.</p>
+          </article>
+          <article class="team-card" role="listitem">
+            <p class="team-role">Brand Intelligence</p>
+            <p class="team-name">Jules Ardent</p>
+            <p class="team-copy">Campaign analytics, social intelligence, and opportunity mapping.</p>
+          </article>
+        </div>
       </section>
     </main>
 
