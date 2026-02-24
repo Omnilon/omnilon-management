@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-label="analysis standby">
+  <rect width="720" height="960" fill="#f1f1f1"/>
+  <g stroke="#1a1a1a" stroke-width="4" fill="none" opacity="0.34">
+    <path d="M56 56h56M56 56v56"/>
+    <path d="M664 56h-56M664 56v56"/>
+    <path d="M56 904h56M56 904v-56"/>
+    <path d="M664 904h-56M664 904v-56"/>
+  </g>
+  <rect x="68" y="408" width="584" height="150" rx="8" fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.35"/>
+  <text x="360" y="482" text-anchor="middle" font-family="monospace" font-size="32" letter-spacing="4" fill="#1a1a1a" opacity="0.5">SELECT TALENT</text>
+  <text x="360" y="522" text-anchor="middle" font-family="monospace" font-size="20" letter-spacing="2" fill="#1a1a1a" opacity="0.42">PROFILE PANEL STANDBY</text>
+</svg>

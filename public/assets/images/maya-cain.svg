@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-label="maya-cain portrait">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f6f6"/>
+      <stop offset="100%" stop-color="#e9e9e9"/>
+    </linearGradient>
+    <linearGradient id="sil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060606"/>
+      <stop offset="100%" stop-color="#1d1d1d"/>
+    </linearGradient>
+    <pattern id="noise" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="none"/>
+      <circle cx="9" cy="8" r="1" fill="rgba(0,0,0,0.08)"/>
+      <circle cx="22" cy="19" r="1" fill="rgba(255,255,255,0.2)"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="960" fill="url(#bg)"/>
+  <rect width="720" height="960" fill="url(#noise)" opacity="0.35"/>
+
+  <g stroke="#060606" stroke-opacity="0.22" stroke-width="2" fill="none">
+    <path d="M20 84h220l24 24h188l24-24h220"/>
+    <path d="M0 620h236l24 26h204l24-26h232"/>
+    <path d="M66 0v176M652 0v176M100 960v-182M620 960v-182"/>
+  </g>
+
+  <circle cx="360" cy="270" r="122" fill="url(#sil)"/>
+  <rect x="244" y="400" width="232" height="338" rx="106" fill="url(#sil)"/>
+  <rect x="282" y="322" width="156" height="66" rx="32" fill="#cecece" opacity="0.5"/>
+
+  <g fill="none" stroke="#060606" stroke-width="4" stroke-linecap="square">
+    <path d="M52 52h34M52 52v34"/>
+    <path d="M668 52h-34M668 52v34"/>
+    <path d="M52 908h34M52 908v-34"/>
+    <path d="M668 908h-34M668 908v-34"/>
+  </g>
+
+  <text x="58" y="836" font-family="monospace" font-size="132" font-weight="700" fill="#060606" opacity="0.2">MC</text>
+
+  <g fill="#060606" font-family="monospace" font-size="22" letter-spacing="2">
+    <text x="52" y="78">ID-106</text>
+    <text x="52" y="110">ANALYSIS NODE</text>
+  </g>
+
+  <rect x="52" y="760" width="616" height="2" fill="#060606" opacity="0.2"/>
+  <rect x="52" y="780" width="348" height="6" fill="#060606" opacity="0.24"/>
+  <rect x="52" y="798" width="492" height="6" fill="#060606" opacity="0.18"/>
+  <rect x="52" y="816" width="616" height="6" fill="#060606" opacity="0.15"/>
+</svg>

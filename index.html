@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMNILON MANAGEMENT</title>
+    <meta
+      name="description"
+      content="OMNILON MANAGEMENT is an exclusive modeling management agency with high-tech talent intelligence and seasonal application intake."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="backdrop-grid" aria-hidden="true"></div>
+
+    <header class="hud-header">
+      <a class="brand" href="#top" aria-label="OMNILON MANAGEMENT home">
+        <span class="brand-main">OMNILON</span>
+        <span class="brand-sub">MANAGEMENT</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hudNav">Menu</button>
+
+      <nav id="hudNav" class="hud-nav" aria-label="Primary">
+        <a href="#console">Talent Intel</a>
+        <a href="#application-center">Application Center</a>
+        <a href="#private-bookings">Bookings</a>
+      </nav>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero-frame reveal" data-reveal>
+        <p class="chip">Private Management Network</p>
+        <h1>OMNILON MANAGEMENT</h1>
+        <p class="hero-line">
+          A brutalist high-tech interface for elite talent operations, global placements, and precision casting.
+        </p>
+        <div class="hero-actions">
+          <a href="#console" class="btn btn-primary">Enter Talent Console</a>
+          <a href="#application-center" class="btn btn-outline">View Intake Status</a>
+        </div>
+      </section>
+
+      <section id="console" class="intel-shell reveal" data-reveal>
+        <div class="intel-header">
+          <p class="chip">Talent Intelligence Console</p>
+          <p class="intel-status">
+            Hover or select any profile to expand full analysis.
+            <span id="scanPulse" aria-hidden="true">SCANNING NODE READY</span>
+          </p>
+        </div>
+
+        <div class="intel-grid">
+          <div class="talent-grid-wrap">
+            <div id="talentGrid" class="talent-grid" role="list" aria-label="Model and talent roster"></div>
+          </div>
+
+          <aside id="profilePanel" class="profile-panel" aria-live="polite">
+            <div class="panel-head">
+              <p class="chip">Profile Analysis</p>
+              <p class="panel-state" id="panelState">Awaiting selection</p>
+            </div>
+
+            <div class="profile-visual-frame">
+              <img id="profileImage" src="./public/assets/images/analysis-placeholder.svg" alt="Profile panel standby" />
+              <div class="scan-lines" aria-hidden="true"></div>
+            </div>
+
+            <dl id="profileData" class="profile-data" aria-label="Selected talent details">
+              <div><dt>Name</dt><dd id="fieldName">--</dd></div>
+              <div><dt>Social @</dt><dd id="fieldHandle">--</dd></div>
+              <div><dt>Birth Place</dt><dd id="fieldBirthPlace">--</dd></div>
+              <div><dt>Height</dt><dd id="fieldHeight">--</dd></div>
+              <div><dt>Age</dt><dd id="fieldAge">--</dd></div>
+              <div><dt>Gender Identity</dt><dd id="fieldGenderIdentity">--</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section id="application-center" class="application-shell reveal" data-reveal>
+        <div>
+          <p class="chip">Application Center</p>
+          <h2>Season Intake Status</h2>
+          <p class="closed-tag">CURRENTLY CLOSED</p>
+          <p class="application-copy">
+            Applications for this season is currently closed, if you would like updates subscribe to our newsletter for
+            updates as to the next time we will be accepting next fall.
+          </p>
+          <p id="nextIntake" class="next-intake">Next intake: Fall --</p>
+        </div>
+
+        <form id="newsletterForm" class="newsletter-form" novalidate>
+          <label for="newsletterEmail">Subscribe for next-fall updates</label>
+          <div class="newsletter-row">
+            <input
+              id="newsletterEmail"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="name@domain.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </div>
+          <p id="newsletterFeedback" class="newsletter-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="private-bookings" class="bookings-shell reveal" data-reveal>
+        <p class="chip">Private Bookings</p>
+        <h2>Editorial and campaign bookings by direct desk</h2>
+        <a href="mailto:bookings@omnilon.management" class="mail-link">bookings@omnilon.management</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>OMNILON MANAGEMENT</p>
+      <p>High-control representation / global operation</p>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
